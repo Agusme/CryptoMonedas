@@ -14,8 +14,7 @@ const[pair,setPair]= useState<Pair>({
   cryptocurrency: ''
 })
 
-const [error, setError]= useState('')
-
+const [error, setError] = useState<string | null>(null);
 const handleChange=(  e: ChangeEvent<HTMLSelectElement>)=>{
 setPair({
   ...pair,
@@ -24,16 +23,17 @@ setPair({
 }
 
 const handleSubmit =(e:FormEvent<HTMLFormElement>)=>{
-e.preventDefault()
+e.preventDefault();
 if(Object.values(pair).includes('')){
   setError('Todos los campos son obligatorios')
+return;
 }
 setError('')
 fetchData(pair)
 }
   return (
     <form className="form" onSubmit={handleSubmit}>
-      {error && <ErrorMessage>{error}</ErrorMessage>}
+     {error && <ErrorMessage>{error}</ErrorMessage>}
       <div className="field">
         <label htmlFor="currency">Moneda:</label>
         <select name="currency" id="currency" onChange={handleChange} value={pair.currency}>
