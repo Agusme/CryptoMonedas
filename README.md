@@ -1,69 +1,55 @@
-# React + TypeScript + Vite
+# 🪙 Cotizador de Criptomonedas  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React**, **Zustand** y **Zod** para cotizar criptomonedas en tiempo real, consumiendo datos desde una API externa.  
 
-Currently, two official plugins are available:
+---
+## 📸Vista previa 
+![Imagen](./src/assets/cryptomonedas.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características  
 
-## Expanding the ESLint configuration
+- 📈 Cotización en **tiempo real** de criptomonedas frente a distintas divisas.  
+- ⚡ Manejo de **estado global** con Zustand.  
+- ✅ **Validación de formularios y datos** con Zod.  
+- 🌐 Consumo de **API pública de criptomonedas**.  
+- 🎨 Interfaz responsive e intuitiva.  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologías utilizadas  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Tecnología     | Uso |
+|----------------|-----|
+| **React + Vite** | Framework y bundler |
+| **TypeScript**   | Tipado estático |
+| **Zustand**      | Estado global |
+| **Zod**          | Validación de datos |
+| **Axios**| Consumo de API |
+| **TailwindCSS**  | Estilos |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚡ Instalación y ejecución
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clonar el repositorio
+`````
+git clone https://github.com/Agusme/CryptoMonedas.git
+cd cotizador-cripto
+`````
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Instalar dependencias
+`````
+npm install
+`````
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Iniciar en modo desarrollo
+`````
+npm run dev
+`````
+## 👩‍💻 Autor
+
+Desarrollado por: Agustina Mena
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/agustina-mena/)
+
+- 📂 [Portafolio](https://portfolioagustinamena.netlify.app/)
+
+- 🐙 [GitHub](https://github.com/Agusme)
